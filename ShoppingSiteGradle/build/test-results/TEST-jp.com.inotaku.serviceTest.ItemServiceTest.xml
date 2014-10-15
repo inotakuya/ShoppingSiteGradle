@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="jp.com.inotaku.serviceTest.ItemServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2014-10-15T02:33:17" hostname="yuraku-PC" time="0.015">
+  <properties/>
+  <testcase name="testFindByItemId" classname="jp.com.inotaku.serviceTest.ItemServiceTest" time="0.008"/>
+  <testcase name="testAddItem" classname="jp.com.inotaku.serviceTest.ItemServiceTest" time="0.0"/>
+  <testcase name="testUpdateItem" classname="jp.com.inotaku.serviceTest.ItemServiceTest" time="0.0"/>
+  <testcase name="testGetAllItem" classname="jp.com.inotaku.serviceTest.ItemServiceTest" time="0.003"/>
+  <testcase name="testDeleteItem" classname="jp.com.inotaku.serviceTest.ItemServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

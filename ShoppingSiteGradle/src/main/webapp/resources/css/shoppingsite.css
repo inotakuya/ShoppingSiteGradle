@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+table.header td{
+	width: 160px;
+}
+
+.error{
+	color: red;
+}
