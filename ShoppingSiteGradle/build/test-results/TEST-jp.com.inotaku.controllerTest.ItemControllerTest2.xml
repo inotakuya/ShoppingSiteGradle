@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="jp.com.inotaku.controllerTest.ItemControllerTest2" tests="1" skipped="0" failures="0" errors="0" timestamp="2014-10-15T02:33:13" hostname="yuraku-PC" time="0.662">
-  <properties/>
-  <testcase name="indexTest" classname="jp.com.inotaku.controllerTest.ItemControllerTest2" time="0.662"/>
-  <system-out><![CDATA[INFO  GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@347d46d4: startup date [Wed Oct 15 11:33:13 JST 2014]; root of context hierarchy
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
