@@ -7,25 +7,20 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+
+	<mvc:annotation-driven validator="validator"></mvc:annotation-driven>
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource"></property>
+	</bean>
+
 	<bean id="messageSource"
 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basename" value="classpath:spring/ValidatorMessages"></property>
 		<property name="defaultEncoding" value="UTF-8"></property>
 	</bean>
 
-
 	<context:component-scan base-package="jp.com.inotaku.controller" />
-
-
-	<mvc:annotation-driven validator="validator" />
-	
-
-
-	<bean id="validator"
-		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
-		<property name="validationMessageSource" ref="messageSource"></property>
-	</bean>
-
 
 	<mvc:resources location="/resources/" mapping="/resources/**" />
 
