@@ -8,6 +8,7 @@
 <title>ユーザー登録完了画面</title>
 </head>
 <body>
+<%@ include file="/WEB-INF/jsp/cart_header.jsp" %>
 	<h2>ユーザー登録完了画面</h2>
 	<b>ユーザー登録が完了しました。</b>
 	<br>
@@ -18,7 +19,7 @@
 		</tr>
 		<tr>
 			<td>パスワード</td>
-			<td><c:out value="${user.password }"></c:out></td>
+			<td><c:out value="xxxxxx"></c:out></td>
 		</tr>
 	</table>
 </body>

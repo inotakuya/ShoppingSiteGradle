@@ -8,6 +8,7 @@
 <title>ログイン完了画面</title>
 </head>
 <body>
+<%@ include file="/WEB-INF/jsp/cart_header.jsp" %>
 <h2>ログイン完了画面</h2>
 ようこそ、${loginUser.userName }さん！
 </body>

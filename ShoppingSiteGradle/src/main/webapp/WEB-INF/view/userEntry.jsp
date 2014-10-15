@@ -8,6 +8,7 @@
 <title>ユーザー登録画面</title>
 </head>
 <body>
+<%@ include file="/WEB-INF/jsp/cart_header.jsp" %>
 	<h2>ユーザー登録画面</h2>
 	<form:form modelAttribute="user" method="post" action="userEntry">
 		<table>
