@@ -7,6 +7,8 @@ import static org.mockito.Mockito.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import jp.com.inotaku.controller.UserController;
 import jp.com.inotaku.domain.User;
 import jp.com.inotaku.service.ItemService;
@@ -16,6 +18,7 @@ import org.junit.Test;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
 import org.omg.CORBA.PUBLIC_MEMBER;
+import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.ui.ExtendedModelMap;
 import org.springframework.validation.BeanPropertyBindingResult;
@@ -58,7 +61,8 @@ public class UserControllerTest extends AbstractControllerTest {
 		
 		BindingResult bindingResult = new BeanPropertyBindingResult(newUser, "user");
 		ExtendedModelMap model = new ExtendedModelMap();
-		String result = userController.addUser(newUser, bindingResult, model);
+		HttpSession session = new MockHttpSession();
+		String result = userController.addUser(newUser, bindingResult, model,session);
 		assertThat("userEntrySuccess", is(result));
 		
 		assertThat("Taro", is(users.get(0).getUserName()));

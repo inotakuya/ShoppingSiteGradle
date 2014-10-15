@@ -5,7 +5,12 @@ import static org.mockito.Mockito.*;
 import static org.hamcrest.CoreMatchers.*;
 
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.List;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpSessionContext;
 
 import jp.com.inotaku.controller.ItemController;
 import jp.com.inotaku.domain.Item;
@@ -15,6 +20,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.omg.CORBA.PRIVATE_MEMBER;
 import org.springframework.context.MessageSource;
+import org.springframework.mock.web.MockHttpSession;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.ui.ExtendedModelMap;
 
@@ -44,7 +50,9 @@ public class ItemControllerTest2 extends AbstractControllerTest {
 		
 		ExtendedModelMap uiModel = new ExtendedModelMap();
 		
-		String result = itemController.index(uiModel);
+		HttpSession session = new MockHttpSession();
+		
+		String result = itemController.index(uiModel,session);
 		
 		assertNotNull(result);
 		assertThat("index", is(result));
